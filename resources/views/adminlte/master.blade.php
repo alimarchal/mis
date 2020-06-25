@@ -150,10 +150,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <footer class="main-footer">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
-            @yield('copyright_right')
+
+            @yield('copyright_right','Copyright © All Right Reserved')
         </div>
         <!-- Default to the left -->
-        @yield('copyright')
+        @yield('copyright','IT Division, Head Office, The Bank of AJ&K')
     </footer>
 </div>
 <!-- ./wrapper -->
@@ -161,6 +162,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 {{-- Custom Scripts --}}
 @yield('custom_scripts_body')
+
 <!-- jQuery -->
 <script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
