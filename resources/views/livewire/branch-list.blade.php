@@ -3,7 +3,7 @@
 
         <div class="col-md-3 mb-3">
             <label for="validationCustom01" title="4"><strong>Region</strong></label>
-            <select class="custom-select" title="4" id="region" name="region" wire:change="region($event.target.value)">
+            <select class="custom-select" title="4" id="region" name="customer[region]" wire:change="region($event.target.value)">
                 <option value="">None</option>
                 @foreach ($regions as $region)
                     <option value="{{strtoupper($region)}}">{{strtoupper($region)}}</option>
@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-3 mb-3">
             <label for="validationCustom02" title="3"><strong>Zone</strong></label>
-            <select class="custom-select" id="district" name="Zone"  wire:change="zone($event.target.value)">
+            <select class="custom-select" id="district" name="customer[zone]"  wire:change="zone($event.target.value)">
                 <option value="" selected>None</option>
                 @if (!empty($regionValue))
                     @foreach ($regionValue as $region)
@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-3 mb-3">
             <label for="validationCustom03" title="5"><strong>District</strong></label>
-            <select class="custom-select" title="" id="region2" name="District" wire:change="district($event.target.value)">
+            <select class="custom-select" title="" id="region2" name="customer[district]" wire:change="district($event.target.value)">
                 <option value="" selected>None</option>
                 @if (!empty($zoneValue))
                     @foreach ($zoneValue as $zone)
@@ -43,7 +43,7 @@
         </div>
         <div class="col-md-3 mb-3">
             <label for="validationCustom04" title="2"><strong>Branch</strong></label>
-            <select class="custom-select" title="" id="district2" name="Branch" >
+            <select class="custom-select" title="" id="district2" name="customer[branch]" >
                 <option value="" selected>None</option>
                 @if (!empty($zoneValue))
                     @foreach ($zoneValue as $zone)

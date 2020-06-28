@@ -12,12 +12,12 @@
                 </p>
             </a>
         </li>
-        <li class="nav-header">Dashboard</li>
+        <li class="nav-header">Borrowers</li>
         <li class="nav-item">
-            <a href="#" class="nav-link {{ (request()->is('/')) ? 'active' : '' }}">
+            <a href="{{url('customer/create')}}" class="nav-link {{ (request()->is('customer/create')) ? 'active' : '' }}">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
-                    Calendar
+                    Add Borrower
                     <span class="badge badge-info right"></span>
                 </p>
             </a>
