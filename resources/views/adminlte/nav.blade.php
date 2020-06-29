@@ -14,7 +14,7 @@
         </li>
         <li class="nav-header">Borrowers</li>
         <li class="nav-item">
-            <a href="{{url('customer/create')}}" class="nav-link {{ (request()->is('customer/create')) ? 'active' : '' }}">
+            <a href="#" class="nav-link {{ (request()->is('')) ? 'active' : '' }}">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
                     Add Borrower
@@ -22,19 +22,27 @@
                 </p>
             </a>
         </li>
-        <li class="nav-item has-treeview {{ (request()->is('admin*')) ? 'menu-open' : '' }}">
-            <a href="#" class="nav-link {{ (request()->is('admin*')) ? 'active' : '' }}">
-                <i class="nav-icon far fa-envelope"></i>
+        <li class="nav-item has-treeview {{ (request()->is('customer*')) ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ (request()->is('customer*')) ? 'active' : '' }}">
+                <i class="nav-icon far fa-user"></i>
                 <p>
-                    Mailbox
+                    Borrowers
                     <i class="fas fa-angle-left right"></i>
                 </p>
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link {{ (request()->is('admin*')) ? 'active' : '' }}">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Inbox</p>
+                    <a href="{{url('customer/create')}}" class="nav-link {{ (request()->is('customer/create')) ? 'active' : '' }}">
+                        <i class="far fa-file nav-icon"></i>
+                        <p>Create</p>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="{{url('customer')}}" class="nav-link {{ (request()->is('customer')) ? 'active' : '' }}">
+                        <i class="far fa-file nav-icon"></i>
+                        <p>Show All</p>
                     </a>
                 </li>
             </ul>
