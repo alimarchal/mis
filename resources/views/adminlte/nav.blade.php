@@ -4,7 +4,7 @@
              with font-awesome or any other icon font library -->
 
         <li class="nav-item">
-            <a href="#" class="nav-link {{ (request()->is('home*')) ? 'active' : '' }}">
+            <a href="{{url('/home')}}" class="nav-link {{ (request()->is('home*')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                     Dashboard
@@ -12,16 +12,7 @@
                 </p>
             </a>
         </li>
-        <li class="nav-header">Borrowers</li>
-        <li class="nav-item">
-            <a href="#" class="nav-link {{ (request()->is('')) ? 'active' : '' }}">
-                <i class="nav-icon far fa-calendar-alt"></i>
-                <p>
-                    Add Borrower
-                    <span class="badge badge-info right"></span>
-                </p>
-            </a>
-        </li>
+
         <li class="nav-item has-treeview {{ (request()->is('customer*')) ? 'menu-open' : '' }}">
             <a href="#" class="nav-link {{ (request()->is('customer*')) ? 'active' : '' }}">
                 <i class="nav-icon far fa-user"></i>
@@ -46,6 +37,16 @@
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="nav-header">Installments</li>
+        <li class="nav-item">
+            <a href="#" class="nav-link {{ (request()->is('')) ? 'active' : '' }}">
+                <i class="nav-icon fa fa-sign-out"></i>
+                <p>
+                    Add Borrower
+                    <span class="badge badge-info right"></span>
+                </p>
+            </a>
         </li>
     </ul>
 </nav>

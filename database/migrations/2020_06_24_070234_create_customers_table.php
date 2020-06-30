@@ -110,9 +110,18 @@ class CreateCustomersTable extends Migration
             $table->string('litigation_status_name_of_court',100)->nullable();
             $table->string('litigation_status_recovery_status_full_or_partial',100)->nullable();
             $table->date('litigation_status_date_of_final_settlement')->nullable();
+            // extra two fields as recommended by DH
             $table->date('installment_deposit_date')->nullable();
             $table->date('installment_due_date')->nullable();
-            $table->string('status',100)->nullable();
+            $table->date('last_installment_date')->nullable();
+            // extra fields for loan repayment schedule
+            $table->date('loan_start_date')->nullable();
+            $table->date('loan_end_date')->nullable();
+            $table->string('total_number_of_installments',10)->nullable();
+            $table->string('current_installment_no',10)->nullable();
+            $table->string('principal_left',10)->nullable();
+            $table->string('status',40)->nullable();
+            $table->string('loan_status',40)->default('pending')->nullable();
             $table->timestamps();
         });
     }
