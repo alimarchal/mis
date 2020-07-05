@@ -115,6 +115,7 @@ class CreateCustomersTable extends Migration
             $table->date('installment_due_date')->nullable();
             $table->date('last_installment_date')->nullable();
             // extra fields for loan repayment schedule
+            $table->string('total_monthly_amount',30)->nullable();
             $table->date('loan_start_date')->nullable();
             $table->date('loan_end_date')->nullable();
             $table->string('total_number_of_installments',10)->nullable();

@@ -29,4 +29,28 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data: {
+        isHidden: false,
+        selectedOption:'',
+        markup: 0,
+        insurance: 0,
+        principal: 0,
+        principal_left: 0,
+        totalPrincipal: 0,
+    },
+    methods:{
+        markUp: function(event) {
+            this.markup = event.target.value;
+            this.totalPrincipal = Number(this.markup)
+        },
+        insuranceFunc: function(event) {
+            this.insurance = event.target.value;
+            this.totalPrincipal = Number(this.insurance) + Number(this.markup)
+        },
+        principalFunc: function(event) {
+            this.principal = event.target.value;
+            this.totalPrincipal = Number(this.principal) + Number(this.insurance) + Number(this.markup)
+        },
+    }
 });
+

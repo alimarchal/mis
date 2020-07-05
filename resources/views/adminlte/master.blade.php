@@ -19,7 +19,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         @yield('title', config('app.name', 'Laravel'))
         @yield('title_postfix', config('app.postfix', ''))
     </title>
-
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
     {{-- Custom stylesheets (pre css) --}}
     @yield('pre_css')
@@ -133,13 +134,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <div class="callout callout-info" @yield('content_style')>
-                            <h5><i class="fas fa-info"></i> @yield('info','')</h5>
-                            @yield('body')
-                        </div>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
+                    <!-- accepted payments column -->
+                    <div class="col-12  p-3 mb-3 @yield('custom_class')" @yield('content_style')>
+                        @yield('body')
+                    </div>
+                </div>
+                <!-- /.row -->
             </div><!-- /.container-fluid -->
         </section>
         <!-- /.content -->

@@ -21,3 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/customer', 'CustomerController');
+Route::resource('/installment', 'InstallmentController');
+Route::get('customer/{customer}/installment/create', 'InstallmentController@create');
+Route::post('customer/{customer}/installment', 'InstallmentController@store');
+Route::get('customer/{customer}/schedule', 'InstallmentController@show');

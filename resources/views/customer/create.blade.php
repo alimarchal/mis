@@ -37,6 +37,7 @@
         </div>
     @endif
     <form class="needs-validation" novalidate method="post" action="{{url('customer')}}">
+
     @csrf
 
     <!-- Card Start -->

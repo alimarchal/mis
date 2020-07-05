@@ -8,8 +8,10 @@ class Installment extends Model
 {
     protected $guarded = [];
 
-    public function customer()
+    public function installments()
     {
         return $this->belongsTo(Customer::class);
     }
+
+
 }

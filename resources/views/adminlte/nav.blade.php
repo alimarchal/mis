@@ -24,7 +24,7 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="{{url('customer/create')}}" class="nav-link {{ (request()->is('customer/create')) ? 'active' : '' }}">
-                        <i class="far fa-file nav-icon"></i>
+                        <i class="fas fa-file nav-icon"></i>
                         <p>Create</p>
                     </a>
                 </li>
@@ -32,18 +32,18 @@
             <ul class="nav nav-treeview">
                 <li class="nav-item">
                     <a href="{{url('customer')}}" class="nav-link {{ (request()->is('customer')) ? 'active' : '' }}">
-                        <i class="far fa-file nav-icon"></i>
-                        <p>Show All</p>
+                        <i class="fas fa-search nav-icon"></i>
+                        <p>Search</p>
                     </a>
                 </li>
             </ul>
         </li>
-        <li class="nav-header">Installments</li>
+        <li class="nav-header">Installment</li>
         <li class="nav-item">
             <a href="#" class="nav-link {{ (request()->is('')) ? 'active' : '' }}">
                 <i class="nav-icon fa fa-sign-out"></i>
                 <p>
-                    Add Borrower
+                    Credit Installment
                     <span class="badge badge-info right"></span>
                 </p>
             </a>

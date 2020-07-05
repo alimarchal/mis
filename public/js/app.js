@@ -49702,7 +49702,30 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    isHidden: false,
+    selectedOption: '',
+    markup: 0,
+    insurance: 0,
+    principal: 0,
+    principal_left: 0,
+    totalPrincipal: 0
+  },
+  methods: {
+    markUp: function markUp(event) {
+      this.markup = event.target.value;
+      this.totalPrincipal = Number(this.markup);
+    },
+    insuranceFunc: function insuranceFunc(event) {
+      this.insurance = event.target.value;
+      this.totalPrincipal = Number(this.insurance) + Number(this.markup);
+    },
+    principalFunc: function principalFunc(event) {
+      this.principal = event.target.value;
+      this.totalPrincipal = Number(this.principal) + Number(this.insurance) + Number(this.markup);
+    }
+  }
 });
 
 /***/ }),

@@ -22,6 +22,7 @@ class CreateInstallmentsTable extends Migration
             $table->string('markup',15)->nullable();
             $table->string('insurance',15)->nullable();
             $table->string('principal',20)->nullable();
+            $table->string('total_monthly_payment',30)->nullable();
             $table->string('outstanding_principal',20)->nullable();
             $table->date('payment_date')->nullable();
             $table->string('delayed_days',10)->nullable();
